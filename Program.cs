@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace ListCastingTest
 {
@@ -17,7 +18,8 @@ namespace ListCastingTest
                 new Duck() { Kind = KindOfDuck.Mallard, Size = 14 },
                 new Duck() { Kind = KindOfDuck.Loon, Size = 13 }
             };
-            Bird.FlyAway(ducks, "Minnesota");
+            IEnumerable<Bird> upcastDucks = ducks;
+            Bird.FlyAway(upcastDucks.ToList(), "Minnesota");
         }
     }
 }
