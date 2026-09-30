@@ -8,7 +8,16 @@ namespace ListCastingTest
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello C# 14.0 and higher!");
+            List<Duck> ducks = new List<Duck>()
+            {
+                new Duck() { Kind = KindOfDuck.Mallard, Size = 17 },
+                new Duck() { Kind = KindOfDuck.Muscovy, Size = 18 },
+                new Duck() { Kind = KindOfDuck.Loon, Size = 14 },
+                new Duck() { Kind = KindOfDuck.Muscovy, Size = 11 },
+                new Duck() { Kind = KindOfDuck.Mallard, Size = 14 },
+                new Duck() { Kind = KindOfDuck.Loon, Size = 13 }
+            };
+            Bird.FlyAway(ducks, "Minnesota");
         }
     }
 }

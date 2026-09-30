@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DucksListAndComparersTest
-{
+namespace ListCastingTest
+{ 
     enum KindOfDuck
     {
         Mallard,
